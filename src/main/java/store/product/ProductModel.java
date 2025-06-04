@@ -32,20 +32,20 @@ public class ProductModel {
     @Column(name = "tx_unit")
     private String unit;
 
-    public ProductModel(Product p) {
-        this.id = p.id();
-        this.name = p.name();
-        this.price = p.price();
-        this.unit = p.unit();
+    public ProductModel(Product a) {
+        this.id = a.id();
+        this.name = a.name();
+        this.price = a.price();
+        this.unit = a.unit();
     }
 
     public Product to() {
         return Product.builder()
-            .id(this.id)
-            .name(this.name)
-            .price(this.price)
-            .unit(this.unit)
-            .build();
-        }
+                .id(this.id)
+                .name(this.name)
+                .price(this.price)
+                .unit(this.unit)
+                .build();
+    }
 
 }
